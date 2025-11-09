@@ -85,7 +85,7 @@ def process_dm_users(geo_event_df):
 
 def main():
     date = '2022-05-31'
-    depth = 5
+    depth = 3
     geo_path = 'hdfs://rc1a-dataproc-m-dg5lgqqm7jju58f9.mdb.yandexcloud.net//user/naumovdv/data/geo.csv'
     events_path = 'hdfs://rc1a-dataproc-m-dg5lgqqm7jju58f9.mdb.yandexcloud.net//user/master/data/geo/events'
     dm_path = 'hdfs://rc1a-dataproc-m-dg5lgqqm7jju58f9.mdb.yandexcloud.net//user/naumovdv/data/analytics/dm_users'
@@ -93,7 +93,7 @@ def main():
     geo_event_df = geo_event_data(events_df, geo_df)
 
     users_df = process_dm_users(geo_event_df)
-    users_df.write.parquet(f"{dm_path}/date={date}/depth={depth}")
+    #users_df.write.parquet(f"{dm_path}/date={date}/depth={depth}")
 
 
 if __name__ == "__main__":

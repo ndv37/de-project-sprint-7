@@ -13,12 +13,9 @@ dm_users
  - travel_count - количество посещенных городов
  - travel_array - список городов в порядке посещения
 
-пробую запустить через spark-submit
-
-
 
 ## задание 2 - Витрина в разрезе зон
-
+(пользовательские функции в файле src/user_function.py, код для расчета витрины src/dm_zones.py)
 dm_zones
  - month — месяц расчёта
  - week — неделя расчёта
@@ -28,19 +25,20 @@ dm_zones
  - week_subscription — количество подписок за неделю
  - week_user — количество регистраций за неделю
  - month_message — количество сообщений за месяц
- - month_reaction
- - month_subscription
- - month_user
+ - month_reaction — количество реакций за месяц
+ - month_subscription — количество подписок за месяц;
+ - month_user — количество регистраций за месяц
 
- пробую запустить через spark-submit
 
  ## задание 3 - витрина для рекомендации друзей
+(пользовательские функции в файле src/user_function.py, код для расчета витрины src/dm_recs.py)
 
 dm_recs
- - user_left
- - user_right
- - processed_dttm
- - zone_id
- - local_time
+ - user_left — первый пользователь
+ - user_right — второй пользователь
+ - processed_dttm — дата расчёта витрины;
+ - zone_id — идентификатор зоны (города)
+ - local_time — локальное время
 
  ## задание 4 - DAG
+dags/project_sprint7_DAG.py
