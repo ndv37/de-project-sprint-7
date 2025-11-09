@@ -61,7 +61,7 @@ step2 = SparkSubmitOperator(
 )
 
 step3 = SparkSubmitOperator(
-    task_id="dm_recs",
+    task_id="dm_recommendations",
     dag=dag,
     application="/lessons/src/dm_recs.py",
     conn_id="yarn_spark",
